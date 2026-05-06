@@ -3,46 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My html page</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-    <body>
-        <h1>Welcome to My Personal Webpage</h1>
+<body>
 
-        <h2>About Me</h2>
-        <p>I am currently learning about web development</p>
+    <header class="site-header">
+        <h1>Eric Hovan</h1>
+        <p class="subtitle">Full-Stack Developer</p>
+    </header>
 
-        <h3>Favorite Hobbies</h3>
-        <ul>
-            <li>Video Games</li>
-            <li>Game Development</li>
-            <li>Guitar</li>
-            <li>Magic: The Gathering</li>
-            <li>Anime/Manga</li>
-        </ul>
+    <main class="container">
+        <!-- Top Section: Summary & Skills -->
+        <section class="top-section">
+            <article class="card summary-card">
+                <h2>Summary</h2>
+                <p>Currently working as a full-stack developer with a focus on creating accessible and performant web and desktop applications. On the side I refine my skills as and artist and game developer. I enjoy taking in all kinds of diciplines and specailizations to broaden my knowledge and expertise.</p>
+            </article>
 
-        <h3>Personal Goals</h3>
-        <ol>
-            <li>Become a proficient full-stack developer</li>
-            <li>Learn 3D modeling and animation</li>
-            <li>Travel to Japan</li>
-        </ol>
+            <article class="card skills-card">
+                <h2>Skills</h2>
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>UI/UX</span>
+                    <span>C#</span>
+                    <span>C++</span>
+                    <span>Unreal Engine Tools</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>OOP</span>
+                    <span>.NET Core</span>
+                    <span>SQL</span>
+                    <span>Responsive Web Design</span>
+                    <span>3D Modeling</span>
+                    <span>Game Design</span>
+                    <span>Cybersecurity</span>
+                </div>
+            </article>
+        </section>
 
-        <h3>Feedback Form</h3>
-        <form action="submit.html" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"  placeholder="Enter your name"><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Enter your message"></textarea><br><br>
-            <input type="submit" value="Submit">
-        </form>
+        <!-- Middle Section: Projects (The Complex Hover) -->
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project Item 1 -->
+                <div class="project-card">
+                    <img src="https://picsum.photos/id/1/400/250" alt="Project One Screenshot" class="project-img">
+                    <div class="project-details">
+                        <h3>Project One</h3>
+                        <p>My custom portfolio website using HTML5, CSS3, and JavaScript.</p>
+                        <a href="#" class="project-link">View Project &rarr;</a>
+                    </div>
+                </div>
+        </section>
 
-        <h3>repo test</h3>
-        <p>This is the test</p>
+        <!-- Bottom Section: Hobbies -->
+        <section class="hobbies-section">
+            <article class="card">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Video Games</li>
+                    <li>Game development</li>
+                    <li>Art and Animation</li>
+                    <li>Manga/Anime</li>
+                    <li>Magic: The Gathering</li>
+                    <li>Guitar</li>
+                </ul>
+            </article>
+        </section>
+        
+        <section id="contact" class="contact-section">
+            <article class="card">
+                <h2>Contact Me</h2>
+                <p>Have a project in mind? Send me a message!</p>
+        
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
 
-        <a href="https://www.youtube.com/">Visit YouTube</a>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                        <span class="error-msg" id="message-error"></span>
+                    </div>
 
-    </body>
+                    <button type="submit" id="submit-btn">Send Message</button>
+                </form>
+
+                <!-- Success Message Container (Hidden by default) -->
+                <div id="success-message" class="success-container hidden">
+                    <h3>🎉 Message Sent!</h3>
+                    <p>Thank you, <span id="success-name"></span>! I'll get back to you at <span id="success-email"></span> shortly.</p>
+                    <button id="reset-btn">Send Another</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Eric Hovan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
